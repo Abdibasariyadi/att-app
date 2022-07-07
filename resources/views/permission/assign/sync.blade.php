@@ -28,8 +28,8 @@
                 <h4>Create Role</h4>
             </div>
             <form id="assignForm" action="{{ route('assigns.edit', $role) }}" name="assignForm" method="POST">
-            @method("PUT")    
-            @csrf
+                @method("PUT")
+                @csrf
                 <div class="card-body">
                     <div class="form-group">
                         <label>Role Name</label>
@@ -142,17 +142,18 @@
             confirm("Are you sure want to delete!");
             var url = "permissions" + '/' + permissionId + '/delete';
             $.ajax({
-                type: "DELETE",
-                url,
-                success: function(data) {
+                type: "DELETE"
+                , url
+                , success: function(data) {
                     table.draw();
-                },
-                error: function(data) {
+                }
+                , error: function(data) {
                     console.log('Error: ', data);
                 }
             })
         })
     })
+
 </script>
 
 @endsection

@@ -24,6 +24,7 @@
                                         <th>Parent</th>
                                         <th>Name</th>
                                         <th>Url</th>
+                                        <th>Icon</th>
                                         <th>Permission Name</th>
                                         <th>Action</th>
                                     </tr>
@@ -87,6 +88,10 @@
                         <label>Url</label>
                         <input type="text" class="form-control" id="url" name="url">
                     </div>
+                    <div class="form-group">
+                        <label>Icon</label>
+                        <input type="text" class="form-control" id="icon" name="icon">
+                    </div>
 
                     <button id="saveBtnNav" type="submit" class="btn btn-primary">Create</button>
                 </div>
@@ -104,37 +109,42 @@
             }
         });
         var table = $('.data-table').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: "{{ route('navigation.create') }}",
-            columns: [{
-                    data: 'DT_RowIndex',
-                    name: 'DT_RowIndex'
-                },
-                {
-                    data: 'parent_id',
-                    name: 'parent_id'
-                },
-                {
-                    data: 'name',
-                    name: 'name'
-                },
-                {
-                    data: 'url',
-                    name: 'url'
-                },
-                {
-                    data: 'permission_name',
-                    name: 'permission_name'
-                },
-                {
-                    data: 'action',
-                    name: 'action',
-                    orderable: false,
-                    searchable: false
-                },
-            ]
+            processing: true
+            , serverSide: true
+            , ajax: "{{ route('navigation.create') }}"
+            , columns: [{
+                    data: 'DT_RowIndex'
+                    , name: 'DT_RowIndex'
+                }
+                , {
+                    data: 'parent_id'
+                    , name: 'parent_id'
+                }
+                , {
+                    data: 'name'
+                    , name: 'name'
+                }
+                , {
+                    data: 'url'
+                    , name: 'url'
+                }
+                , {
+                    data: 'icon'
+                    , name: 'icon'
+                }
+                , {
+                    data: 'permission_name'
+                    , name: 'permission_name'
+                }
+                , {
+                    data: 'action'
+                    , name: 'action'
+                    , orderable: false
+                    , searchable: false
+                }
+            , ]
         })
     })
+
 </script>
 @endsection

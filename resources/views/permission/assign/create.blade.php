@@ -182,17 +182,18 @@
             confirm("Are you sure want to delete!");
             var url = "permissions" + '/' + permissionId + '/delete';
             $.ajax({
-                type: "DELETE",
-                url,
-                success: function(data) {
+                type: "DELETE"
+                , url
+                , success: function(data) {
                     table.draw();
-                },
-                error: function(data) {
+                }
+                , error: function(data) {
                     console.log('Error: ', data);
                 }
             })
         })
     })
+
 </script>
 
 @endsection

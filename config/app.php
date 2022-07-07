@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://localhost/anggota-app'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -67,7 +67,9 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Jakarta',
+    // 'timezone' => 'Asia/Jakarta',
+    'timezone' => 'UTC',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -161,7 +163,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Codedge\Fpdf\FpdfServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -233,7 +236,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
-
+        'zklibrary' => 'app\libraries\zklibrary\ZKLibrary',
+        'Fpdf' => Codedge\Fpdf\Facades\Fpdf::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

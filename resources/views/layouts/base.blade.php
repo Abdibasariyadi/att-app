@@ -34,8 +34,11 @@
     <script src="{{URL::asset('assets/highcharts/exporting.js')}}"></script>
     <script src="{{URL::asset('assets/highcharts/export-data.js')}}"></script>
     <script src="{{URL::asset('assets/highcharts/accessibility.js')}}"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="https://kit.fontawesome.com/48277b3dfc.js" crossorigin="anonymous"></script>
     <!-- MULAI DATEPICKER JS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <link rel="stylesheet" href="{{URL::asset('assets/css/jquery-ui.css')}}">
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
@@ -45,8 +48,10 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="{{URL::asset('assets/css/css.css')}}" rel="stylesheet">
 
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" /> --}}
     <!-- Styles -->
     @yield('styles')
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{URL::asset('assets/css/bootstrap.min.css')}}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -67,6 +72,7 @@
         .error {
             color: #FF0000;
         }
+
     </style>
 </head>
 

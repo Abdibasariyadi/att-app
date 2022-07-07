@@ -47,6 +47,7 @@ class NavigationController extends Controller
         Navigation::create([
             'name' => request('name'),
             'url' => request('url') ?? null,
+            'icon' => request('icon') ?? null,
             'parent_id' => request('parent_id') ?? null,
             'permission_name' => request('permission_name')
         ]);
